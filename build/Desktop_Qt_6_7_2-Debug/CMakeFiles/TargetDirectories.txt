@@ -1,9 +1,0 @@
-/home/mew/tictactoe/build/Desktop_Qt_6_7_2-Debug/CMakeFiles/tictactoe.dir
-/home/mew/tictactoe/build/Desktop_Qt_6_7_2-Debug/CMakeFiles/edit_cache.dir
-/home/mew/tictactoe/build/Desktop_Qt_6_7_2-Debug/CMakeFiles/rebuild_cache.dir
-/home/mew/tictactoe/build/Desktop_Qt_6_7_2-Debug/CMakeFiles/list_install_components.dir
-/home/mew/tictactoe/build/Desktop_Qt_6_7_2-Debug/CMakeFiles/install.dir
-/home/mew/tictactoe/build/Desktop_Qt_6_7_2-Debug/CMakeFiles/install/local.dir
-/home/mew/tictactoe/build/Desktop_Qt_6_7_2-Debug/CMakeFiles/install/strip.dir
-/home/mew/tictactoe/build/Desktop_Qt_6_7_2-Debug/CMakeFiles/tictactoe_autogen_timestamp_deps.dir
-/home/mew/tictactoe/build/Desktop_Qt_6_7_2-Debug/CMakeFiles/tictactoe_autogen.dir
