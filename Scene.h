@@ -10,10 +10,10 @@ class Stage : public QWidget
 {
 public:
     Stage(QWidget* parent = nullptr);
+    void paintEvent(QPaintEvent* event) override;
     ~Stage();
 
 protected:
-    void paintEvent(QPaintEvent* event) override;
     void mousePressEvent(QMouseEvent* event) override;
 
 private:

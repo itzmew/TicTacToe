@@ -1,7 +1,8 @@
 #include "Scene.h"
 
 Stage::Stage(QWidget* parent)
-    : m_model(new Model(this))
+    : QWidget(parent)
+    , m_model(new Model(this))
     , m_controller(new Controller(m_model, this))
 {
     connect(m_model, &Model::stateChanged, this, QOverload<>::of(&Stage::update));
@@ -85,4 +86,3 @@ void Stage::drawGameResult(QPainter& painter) {
     painter.setFont(QFont("Arial", 48, QFont::Bold));
     painter.drawText(rect(), Qt::AlignCenter, resultText);
 }
-

@@ -2,6 +2,7 @@
 
 #include <QMainWindow>
 #include "Scene.h"
+#include <ui_MainWindow.h>
 
 class MainWindow : public QMainWindow
 {
@@ -13,4 +14,5 @@ public:
 
 private:
     Stage* m_stage;
+    Ui::MainWindow* ui;
 };
