@@ -3,15 +3,15 @@
 #include <QPainter>
 #include <QtWidgets/qwidget.h>
 #include <QtGui/qevent.h>
-#include "Controller.h"
-#include "Model.h"
+#include "controller.h"
+#include "model.h"
 
-class Stage : public QWidget
+class Scene : public QWidget
 {
 public:
-    Stage(QWidget* parent = nullptr);
+    Scene(QWidget* parent = nullptr);
     void paintEvent(QPaintEvent* event) override;
-    ~Stage();
+    ~Scene();
 
 protected:
     void mousePressEvent(QMouseEvent* event) override;

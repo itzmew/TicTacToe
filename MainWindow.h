@@ -1,7 +1,7 @@
 #pragma once
 
 #include <QMainWindow>
-#include "Scene.h"
+#include "scene.h"
 #include <ui_MainWindow.h>
 
 class MainWindow : public QMainWindow
@@ -13,6 +13,6 @@ public:
     ~MainWindow();
 
 private:
-    Stage* m_stage;
+    Scene* m_scene;
     Ui::MainWindow* ui;
 };

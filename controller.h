@@ -1,7 +1,7 @@
 #pragma once
 
 #include <QObject>
-#include "Model.h"
+#include "model.h"
 
 class Controller : public QObject
 {

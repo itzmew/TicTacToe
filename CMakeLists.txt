@@ -23,9 +23,14 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(tictactoe
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
-        Controller.h Controller.cpp
-        Scene.h Scene.cpp
-        Model.h Model.cpp
+        controller.h controller.cpp
+        scene.h scene.cpp
+        model.h model.cpp
+        settingsdialog.h settingsdialog.cpp settingsdialog.ui
+        configmanager.h configmanager.cpp
+
+
+
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET tictactoe APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

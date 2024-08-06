@@ -1,19 +1,19 @@
-#include "Scene.h"
+#include "scene.h"
 
-Stage::Stage(QWidget* parent)
+Scene::Scene(QWidget* parent)
     : QWidget(parent)
     , m_model(new Model(this))
     , m_controller(new Controller(m_model, this))
 {
-    connect(m_model, &Model::stateChanged, this, QOverload<>::of(&Stage::update));
+    connect(m_model, &Model::stateChanged, this, QOverload<>::of(&Scene::update));
 }
 
-Stage::~Stage() {
+Scene::~Scene() {
     delete m_model;
     delete m_controller;
 }
 
-void Stage::paintEvent(QPaintEvent* event) {
+void Scene::paintEvent(QPaintEvent* event) {
     QPainter painter(this);
     drawField(painter);
 
@@ -29,13 +29,13 @@ void Stage::paintEvent(QPaintEvent* event) {
     drawGameResult(painter);
 }
 
-void Stage::mousePressEvent(QMouseEvent* event) {
+void Scene::mousePressEvent(QMouseEvent* event) {
     int row = event->position().y() / (height() / 3);
     int col = event->position().x() / (width() / 3);
     m_controller->handleClicked(row, col);
 }
 
-void Stage::drawField(QPainter& painter) {
+void Scene::drawField(QPainter& painter) {
     int fieldWidth = width();
     int fieldHeight = height();
 
@@ -45,7 +45,7 @@ void Stage::drawField(QPainter& painter) {
     }
 }
 
-void Stage::drawX(QPainter& painter, int row, int col) {
+void Scene::drawX(QPainter& painter, int row, int col) {
     painter.setPen(QPen(Qt::red, 3));
     int squareWidth = width() / 3;
     int squareHeight = height() / 3;
@@ -55,7 +55,7 @@ void Stage::drawX(QPainter& painter, int row, int col) {
     painter.drawLine((col + 1) * squareWidth - margin, row * squareHeight + margin, col * squareWidth + margin, (row + 1) * squareHeight - margin);
 }
 
-void Stage::drawO(QPainter& painter, int row, int col) {
+void Scene::drawO(QPainter& painter, int row, int col) {
     painter.setPen(QPen(Qt::blue, 3));
     int squareWidth = width() / 3;
     int squareHeight = height() / 3;
@@ -64,7 +64,7 @@ void Stage::drawO(QPainter& painter, int row, int col) {
     painter.drawEllipse(col * squareWidth + margin, row * squareHeight + margin, squareWidth - 2 * margin, squareHeight - 2 * margin);
 }
 
-void Stage::drawGameResult(QPainter& painter) {
+void Scene::drawGameResult(QPainter& painter) {
     Model::GameState gameState = m_model->findWinner();
 
     QString resultText;
