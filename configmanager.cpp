@@ -51,8 +51,3 @@ void ConfigManager::saveConfig(std::map<std::string, std::string> &configMap){
     }
 }
 
-void ConfigManager::updateConfig(const std::string &key, const std::string &value){
-    std::map<std::string, std::string> configMap = readConfig();
-    configMap[key] = value;
-    saveConfig(configMap);
-}
