@@ -28,6 +28,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         model.h model.cpp
         settingsdialog.h settingsdialog.cpp settingsdialog.ui
         configmanager.h configmanager.cpp
+        tcpserver.h tcpserver.cpp
+        itcpserver.h itcpserver.cpp
 
 
 
